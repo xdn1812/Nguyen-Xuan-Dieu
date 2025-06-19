@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ảnh với mô tả</title>
+    <style>
+       
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .image-container {
+            max-width: 600px;
+            text-align: center;
+        }
+
+        figure {
+            margin: 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px; /* Bo góc ảnh */
+            display: block;
+            margin: 0 auto 15px; /* Căn giữa ảnh */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Tạo bóng cho ảnh */
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.02); /* Hiệu ứng phóng nhẹ khi hover */
+        }
+
+        figcaption {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.5;
+            padding: 0 10px;
+            font-style: italic;
+        }
+
+        .image-title {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <!-- ✅ HTML Structure -->
+        <figure>
+            <div class="image-title">Cảnh đẹp thiên nhiên</div>
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Phong cảnh núi và hồ">
+            <figcaption>
+                Một khung cảnh thiên nhiên tuyệt đẹp với dãy núi hùng vĩ và mặt hồ phẳng lặng.
+            </figcaption>
+        </figure>
+    </div>
+</body>
+</html>
