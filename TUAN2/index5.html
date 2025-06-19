@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Links</title>
+<style>
+    body {
+        font-family: 'Courier New', Courier, monospace;
+        margin: 0;
+        padding: 20px;
+        background-color: cornflowerblue;
+    }
+    nav {
+        background-color: beige;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    li {
+        margin: 5px 0;
+    }
+    ul {
+        list-style-type: circle;
+        padding: 0;
+        margin: 0;
+         display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+     a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+    a:hover {
+        color: khaki;
+    }
+     a:active {
+            color: #c0392b;
+        }
+        a:active::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #c0392b;
+        }
+
+        /* Different style for external links */
+        a[target="_blank"]::after {
+            content: '↗';
+            margin-left: 4px;
+            font-size: 0.8em;
+        }
+
+        /* Style for email link */
+        a[href^="mailto:"] {
+            color: #3498db;
+        }
+        a[href^="mailto:"]:hover {
+            color: #2980b9;
+        }
+
+        /* Style for anchor link */
+        a[href^="#"] {
+            color: #27ae60;
+        }
+        a[href^="#"]:hover {
+            color: #219653;
+        }
+</style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="https://www.example.com" target="_blank">Visit Example Website</a></li>
+            <li><a href="/home.html" target="_self">Home Page</a></li>
+            <li><a href="/about.html" target="_self">About Us</a></li>
+            <li><a href="mailto:contact@example.com" target="_blank">Contact Us</a></li>
+            <li><a href="#section1" target="_self">Jump to Section 1</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
