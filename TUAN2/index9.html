@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đây là audio mp3</title>
+    <style> 
+        body { 
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: cadetblue;
+            margin: 0;
+            display: flex;
+            padding: 20px;
+            flex-direction: column;
+            align-items: center;
+            }
+        .audio-container {
+            width: 100%;
+            max-width: 500px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        audio {
+            width: 100%;
+            max-width: 500px;
+            margin: 0;
+            border: 1.5;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgb(red, green, blue);
+        }
+        .audio_title {
+            font-size: 24px;
+            color: blue;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+     </style>
+</head>
+<body>
+    <div class="audio-container">
+        <!-- ✅ HTML Audio Player -->
+        <h2 class="audio-title">Bài hát yêu thích</h2>
+        <audio controls>
+            <source src="bai-hat.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+</body>
+</html>
