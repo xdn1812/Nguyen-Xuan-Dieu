@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thời khóa biểu</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        table {
+            width: 100%;
+            max-width: 800px;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: white;
+        }
+        
+        thead {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        
+        th {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        
+        /* Tô màu hàng chẵn/lẻ khác nhau */
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        tr:nth-child(odd) {
+            background-color: white;
+        }
+        
+        /* Hiệu ứng hover */
+        tr:hover {
+            background-color: #e3f2fd;
+        }
+        
+        /* Tô viền bảng */
+        table {
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1>Thời khóa biểu</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Thứ</th>
+                <th>Môn học</th>
+                <th>Giờ học</th>
+                <th>Phòng học</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Thứ 2</td>
+                <td>Anh văn</td>
+                <td>17h - 19h</td>
+                <td>A - 02</td>
+            </tr>
+            <tr>
+                <td>Thứ 3</td>
+                <td>Toán cao cấp</td>
+                <td>13h - 15h</td>
+                <td>B - 11</td>
+            </tr>
+            <tr>
+                <td>Thứ 4</td>
+                <td>Anh văn</td>
+                <td>17h - 19h</td>
+                <td>A - 06</td>
+            </tr>
+            <tr>
+                <td>Thứ 5</td>
+                <td>Kinh tế vi mô</td>
+                <td>15h - 17h</td>
+                <td>C - 03</td>
+            </tr>
+            <tr>
+                <td>Thứ 6</td>
+                <td>Thương mại điện tử</td>
+                <td>9h - 11h</td>
+                <td>D - 09</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
