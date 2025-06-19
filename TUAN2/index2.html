@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách các môn học yêu thích</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        li {
+            padding: 15px 20px;
+            margin: 8px 0;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        /* Màu sắc khác nhau cho từng môn học */
+        li:nth-child(1) {
+            background-color: #ffeaa7;
+            color: #d35400;
+        }
+        
+        li:nth-child(2) {
+            background-color: #a5d8ff;
+            color: #1864ab;
+        }
+        
+        li:nth-child(3) {
+            background-color: #b2f2bb;
+            color: #0b7285;
+        }
+        
+        /* Hiệu ứng hover */
+        li:hover {
+            transform: translateX(10px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        li:nth-child(1):hover {
+            background-color: #ffd43b;
+        }
+        
+        li:nth-child(2):hover {
+            background-color: #74c0fc;
+        }
+        
+        li:nth-child(3):hover {
+            background-color: #69db7c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Danh sách các môn học yêu thích</h1>
+        <ul>
+            <li>Lịch sử</li>
+            <li>Địa lí</li>
+            <li>Anh văn</li>
+        </ul>
+    </div>
+</body>
+</html>
