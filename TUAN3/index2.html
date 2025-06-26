@@ -5,33 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danh sách các môn học yêu thích</title>
     <style>
-        
-.container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 cột, có thể thay bằng repeat(3, 1fr) cho 3 cột */
-    gap: 10px; /* Khoảng cách giữa các card */
-    align-items: center;
-    justify-content: center;
-}
-
-.card {
-    border: 1px solid #ccc; /* Thêm border */
-    padding: 10px; /* Thêm padding */
-    text-align: center; /* Căn giữa nội dung trong card */
-}
-
-body {
-    align-items: center;
-    justify-content: center;
-}
-</style>
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* Cho phép các ô chuyển sang hàng mới khi không đủ không gian */
+            background-color: blanchedalmond;
+            align-items: center;
+            justify-content: center;
+        }     
+        h1 {
+            font-size: 20px;
+            text-align: center;
+            width: 100%; /* Đảm bảo tiêu đề chiếm toàn bộ chiều rộng */
+        }
+        .item {
+            display: flex;
+            height: 20vh;
+            width: 20vh;
+            background-color: lightblue;
+            border-radius: 10px;
+            margin: 15px;
+            justify-content: center; /* Căn giữa nội dung bên trong ô */
+            align-items: center; /* Căn giữa nội dung bên trong ô */
+        }
+    </style>
+</head>
 <body>
     <div class="container">
-        <h1> Danh sách các môn học yêu thích </h1>
-        <ul> 
-            <li class="card1"> Toán </li>
-            <li class="card2">Anh văn </li>
-            <li class="card3"> Ngữ văn </li>
-        </ul>
+        <h1> DANH SÁCH CÁC MÔN HỌC YÊU THÍCH </h1>
+        <div id="card1" class="item"> Toán </div>
+        <div id="card2" class="item"> Ngữ văn </div>
+        <div id="card3" class="item"> Anh văn </div>
     </div>
 </body>
+</html>
