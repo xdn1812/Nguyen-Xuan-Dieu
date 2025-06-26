@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Đơn Giản</title>
+    <style>
+        /* Phần 1: Reset CSS - Đặt lại các style mặc định */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        /* Giải thích: 
+           - margin: 0; padding: 0; -> Xóa khoảng cách mặc định
+           - box-sizing: border-box; -> Dễ tính toán kích thước
+           - font-family -> Chọn font chữ đơn giản
+        */
+
+        /* Phần 2: Style cho toàn trang */
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        /* Giải thích:
+           - background-color: Màu nền nhạt
+           - color: Màu chữ chính
+           - line-height: Giãn cách dòng cho dễ đọc
+        */
+
+        /* Phần 3: Header - Phần đầu trang */
+        header {
+            background-color: #4a6fa5;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        /* Giải thích:
+           - background-color: Màu nền xanh
+           - text-align: Căn giữa nội dung
+           - padding: Tạo khoảng cách bên trong
+        */
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            margin-bottom: 15px;
+        }
+        /* Giải thích:
+           - width/height: Kích thước ảnh
+           - border-radius: 50% -> Làm tròn ảnh
+           - object-fit: cover -> Đảm bảo ảnh không bị méo
+           - border: Viền trắng
+        */
+
+        /* Phần 4: Các dự án */
+        .projects {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        /* Giải thích:
+           - max-width: Giới hạn chiều rộng tối đa
+           - margin: Căn giữa khối
+           - padding: Khoảng cách hai bên
+        */
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        /* Giải thích:
+           - display: grid -> Tạo layout dạng lưới
+           - grid-template-columns: 1fr 1fr -> Chia 2 cột bằng nhau
+           - gap: Khoảng cách giữa các ô
+        */
+
+        @media (max-width: 600px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* Giải thích: Khi màn hình nhỏ hơn 600px thì chỉ hiển thị 1 cột */
+
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        /* Giải thích:
+           - background: Nền trắng
+           - border-radius: Bo góc
+           - overflow: hidden -> Ảnh không tràn ra ngoài
+           - box-shadow: Đổ bóng nhẹ
+        */
+
+        .project-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        /* Giải thích: Ảnh chiếm toàn bộ chiều rộng, cao 180px */
+
+        .project-info {
+            padding: 15px;
+        }
+        /* Giải thích: Khoảng cách bên trong phần thông tin */
+
+        /* Phần 5: Footer - Chân trang */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Phần đầu trang -->
+    <header>
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ảnh cá nhân" class="profile-img">
+        <h1>Nguyễn Văn A</h1>
+        <p>Lập trình viên Front-end</p>
+    </header>
+
+    <!-- Phần nội dung chính -->
+    <main class="projects">
+        <h2 style="text-align: center; margin-bottom: 20px;">Các dự án của tôi</h2>
+        
+        <div class="project-grid">
+            <!-- Dự án 1 -->
+            <div class="project-card">
+                <img src="https://source.unsplash.com/random/600x400/?website" alt="Dự án 1" class="project-img">
+                <div class="project-info">
+                    <h3>Trang web giới thiệu</h3>
+                    <p>Trang web giới thiệu công ty sử dụng HTML, CSS thuần</p>
+                </div>
+            </div>
+
+            <!-- Dự án 2 -->
+            <div class="project-card">
+                <img src="https://source.unsplash.com/random/600x400/?app" alt="Dự án 2" class="project-img">
+                <div class="project-info">
+                    <h3>Ứng dụng thời tiết</h3>
+                    <p>Ứng dụng xem thời tiết bằng JavaScript đơn giản</p>
+                </div>
+            </div>
+
+            <!-- Dự án 3 -->
+            <div class="project-card">
+                <img src="https://source.unsplash.com/random/600x400/?blog" alt="Dự án 3" class="project-img">
+                <div class="project-info">
+                    <h3>Blog cá nhân</h3>
+                    <p>Trang blog cá nhân với giao diện đơn giản</p>
+                </div>
+            </div>
+
+            <!-- Dự án 4 -->
+            <div class="project-card">
+                <img src="https://source.unsplash.com/random/600x400/?portfolio" alt="Dự án 4" class="project-img">
+                <div class="project-info">
+                    <h3>Portfolio</h3>
+                    <p>Trang portfolio đầu tiên của tôi</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Phần chân trang -->
+    <footer>
+        <p>Email: example@email.com | SĐT: 0123 456 789</p>
+    </footer>
+</body>
+</html>
