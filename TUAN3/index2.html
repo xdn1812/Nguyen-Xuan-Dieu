@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách các môn học yêu thích</title>
+    <style>
+        
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cột, có thể thay bằng repeat(3, 1fr) cho 3 cột */
+    gap: 10px; /* Khoảng cách giữa các card */
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    border: 1px solid #ccc; /* Thêm border */
+    padding: 10px; /* Thêm padding */
+    text-align: center; /* Căn giữa nội dung trong card */
+}
+
+body {
+    align-items: center;
+    justify-content: center;
+}
+</style>
+<body>
+    <div class="container">
+        <h1> Danh sách các môn học yêu thích </h1>
+        <ul> 
+            <li class="card1"> Toán </li>
+            <li class="card2">Anh văn </li>
+            <li class="card3"> Ngữ văn </li>
+        </ul>
+    </div>
+</body>
