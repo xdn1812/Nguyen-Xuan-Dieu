@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thời khóa biểu</title>
+    <style>
+        body {
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: lightblue;
+        }
+        .container {
+            display: grid;
+            grid-template-areas: "column1 column2 column3" ;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .column-container {
+            display: flex;
+            flex-direction: ;
+            justify-content: space-around;
+            width: 100%;
+            gap: 30px;
+        }
+        h1 {
+            font-size: 18px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+        }
+        .column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .item {
+            display: flex;
+            height: 15vh;
+            width: 15vh;
+            background-color: rgb(253, 254, 254);
+            border-radius: 10px;
+            margin: 1px;
+            justify-content: center; 
+            border: 2px solid #f2a407;
+            align-items: center; 
+            
+        }
+       .box {
+            display: flex;
+            height: 15vh;
+            width: 15vh;
+            background-color: rgb(244, 206, 237);
+            border-radius: 10px;
+            margin: 1px;
+            justify-content: center; 
+            align-items: center;
+            text-align: center;
+            border: 2px solid #f2a407; 
+        }
+         @media (max-width: 768px) {
+            .columns-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .column {
+                width: 100%;
+            }
+            
+            .item, .box {
+                width: 200px;
+                height: 80px;
+            }
+        }
+    </style>
+<body>
+    <h1>THỜI KHÓA BIỂU</h1>
+    <div class="container">
+        
+        
+        <div class="columns-container">
+            <!-- Cột 1: Thứ 2 - Toán -->
+            <div class="column1">
+                <div class="item">Thứ 2</div>
+                <div class="box">Toán</div>
+            </div>
+            
+            <!-- Cột 2: Thứ 4 - Anh văn -->
+            <div class="column2">
+                <div class="item">Thứ 4</div>
+                <div class="box">Anh văn</div>
+            </div>
+            
+            <!-- Cột 3: Thứ 6 - Ngữ văn -->
+            <div class="column3">
+                <div class="item">Thứ 6</div>
+                <div class="box">Ngữ văn</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
