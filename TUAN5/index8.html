@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4> Số điện thoại cá nhân</h4>
+    <div class="cau1">
+        <input type="text" id="CheckSdt" placeholder="Input Phone Number">
+        <button onclick="CheckNumber()">Kiểm tra SĐT</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        function CheckNumber() {
+            const Checksdt = document.getElementById("CheckSdt").value;
+            const result = document.getElementById("result");
+            const phoneRegex = /^(03|05|07|08|09)\d{8}$/;
+            if(Checksdt.trim() === '') {
+                result.innerHTML = '<span style="color: red;">Vui lòng nhập số điện thoại!</span>';
+                return;
+            }
+            if (phoneRegex.test(Checksdt)) {
+                result.innerHTML = '<span style="color: green;"> Số điện thoại hợp lệ!</span>';    
+            } else {
+                result.innerHTML = '<span style="color: red;"> Số điện thoại không hợp lệ! (Phải có 10 số, bắt đầu bằng 03, 05, 07, 08, 09)</span>';
+            }
+        }
+    </script>
+</body>
+</html>
