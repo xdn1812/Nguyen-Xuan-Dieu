@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Cau2">
+        <h3> Câu 2: </h3>
+        <input type="text" id="name2" placeholder="Name2">
+        <button onclick="LetPrint()">Print Name</button>
+        <p id="Print"></p>
+    </div>
+    <script>
+        function LetPrint() {
+            const yourname2 = document.getElementById("name2").value;
+            const greetingtext = "Hello " + yourname2;
+            document.getElementById("Print").innerText = greetingtext;
+        }
+    </script>
+</body>
+</html>
