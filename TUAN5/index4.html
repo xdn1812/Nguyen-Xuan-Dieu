@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Cau4">
+        <h3> Câu 4: </h3>
+        <input type="text" id="number1" placeholder="Printnumber1">
+        <input type="text" id="number2" placeholder="Printnumber2">
+        <button onclick="PrintNum()">In ra đáp án</button>
+        
+    </div>
+    <script>
+        function PrintNum() {
+        const num1 = parseFloat(document.getElementById("number1").value);
+        const num2 = parseFloat(document.getElementById("number2").value);
+        const sum = num1 + num2
+        console.log("Đáp án là " + sum);
+        }
+    </script>
+</body>
+</html>
