@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra ngày tháng</title>
+</head>
+<body>
+    <div>
+        <h2>Kiểm tra ngày tháng hợp lệ</h2>
+        <input type="text" id="dateInput" placeholder="Nhập ngày (dd/mm/yyyy)">
+        <button onclick="checkDate()">Kiểm tra</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        function checkDate() {
+            const input = document.getElementById('dateInput').value;
+            const result = document.getElementById('result');
+            if (!input) {
+                result.innerHTML = 'Vui lòng nhập ngày';
+                return;
+            }
+
+            const parts = input.split('/');
+            if (parts.length !== 3) {
+                result.innerHTML = 'Định dạng sai. Dùng dd/mm/yyyy';
+                return;
+            }
+            const day = parseInt(parts[0]);
+            const month = parseInt(parts[1]);
+            const year = parseInt(parts[2]);
+
+            if (isNaN(day) || isNaN(month) || isNaN(year)) {
+                result.innerHTML = 'Phải nhập số';
+                return;
+            }
+
+            if (month < 1 || month > 12) {
+                result.innerHTML = 'Tháng phải từ 1 đến 12';
+                return;
+            }
+
+            const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+            if (month === 2 && ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0))) {
+                daysInMonth[1] = 29;
+            }
+
+            if (day < 1 || day > daysInMonth[month - 1]) {
+                result.innerHTML = 'Ngày không hợp lệ';
+                return;
+            }
+            
+            result.innerHTML = 'Ngày hợp lệ!';
+        }
+    </script>
+</body>
+</html>
