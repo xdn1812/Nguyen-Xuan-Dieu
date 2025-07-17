@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Số</title>
+</head>
+<body>
+    <input type="text" id="numberInput" placeholder="Nhập số ở đây">
+    <button onclick="checkNumber()">Kiểm tra</button>
+    <div id="message"></div>
+
+    <script>
+        function checkNumber() {
+            const input = document.getElementById('numberInput').value;
+            const message = document.getElementById('message');
+            message.textContent = isNaN(input) ? "Lỗi: Nhập số hợp lệ!" : "Số hợp lệ!";
+            message.style.color = isNaN(input) ? "red" : "green";
+        }
+    </script>
+</body>
+</html>
