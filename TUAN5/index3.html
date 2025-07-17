@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 3</title>
+</head>
+<body>
+    <div class="Cau3">
+        <h3> Câu 3: </h3>
+        <input type="text" id="name2" placeholder="Name2">
+        <button onclick="LetPrint()">Print Name</button>
+        <p id="Print"></p>
+    </div>
+    <script>
+        function LetPrint() {
+            const yourname2 = document.getElementById("name2").value;
+            let greetingtext;
+
+            if (yourname2.trim() === "") {
+                greetingtext = "Bạn chưa nhập giá trị";
+            } else {
+                if (!isNaN(yourname2) && yourname2.trim() !== "") {
+                    greetingtext = "Bạn đã nhập số: " + yourname2;
+                } else {
+                    greetingtext = "Bạn đã nhập văn bản: " + yourname2;
+                }
+            }
+            document.getElementById("Print").innerText = greetingtext;
+        }
+    </script>
+</body>
+</html>
