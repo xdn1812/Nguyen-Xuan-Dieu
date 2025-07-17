@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h2 {
+        text-align: center;
+        background-color: beige;
+        width: 100%;
+    }
+    h4 {
+        font-style: italic;
+        margin-left: 50px;
+    }
+</style>
+<body>
+    <h2> KIỂM TRA THÔNG TIN CÁ NHÂN </h2>
+    <h4> Số điện thoại cá nhân</h4>
+    <div class="cau1">
+        <input type="text" id="CheckSdt" placeholder="Input Phone Number">
+        <button onclick="CheckNumber()">Kiểm tra SĐT</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        function CheckNumber() {
+            const Checksdt = document.getElementById("CheckSdt").value;
+            const result = document.getElementById("result");
+            const phoneRegex = /^(03|05|07|08|09)\d{8}$/;
+            if(Checksdt.trim() === '') {
+                result.innerHTML = '<span style="color: red;">Vui lòng nhập số điện thoại!</span>';
+                return;
+            }
+            if (phoneRegex.test(Checksdt)) {
+                result.innerHTML = '<span style="color: green;"> Số điện thoại hợp lệ!</span>';    
+            } else {
+                result.innerHTML = '<span style="color: red;"> Số điện thoại không hợp lệ! (Phải có 10 số, bắt đầu bằng 03, 05, 07, 08, 09)</span>';
+            }
+        }
+    </script>
+    <h4> Số căn cước công nhân </h4>
+    <div class="Cau2">
+        <input type="text" id="cccd" placeholder="Input Number CCCD">
+        <button onclick="CheckNumberCCCD()"> Kiểm tra số CCCD</button>
+        <div id="resultcccd"></div>
+    </div>
+    <script>
+        function CheckNumberCCCD() {
+            const Checkcc = document.getElementById("cccd").value;
+            const result2 = document.getElementById("resultcccd");
+            const numcccdRegex = /^\d{12}$/;
+            if(Checkcc.trim() === '') {
+                result2.innerHTML = '<span style="color: red;">Vui lòng nhập số CCCD</span>';
+                return;
+            }
+            if(numcccdRegex.test(Checkcc)) {
+                result2.innerHTML = '<span style= "color: green;">Số CCCD hợp lệ</span>';
+            } else{
+                result2.innerHTML = '<span style= "color: red;">Số CCCD không hợp lệ</span>';
+            }
+        }
+    </script>
+    <h4> Số tài khoản ngân hàng </h4>
+    <div class="Cau 3">
+        <input type="text" id="STK" placeholder="Input Bank Number">
+        <button onclick="CheckSTK()">Kiểm tra STK Bank</button>
+        <div id="resut"></div>
+    </div>
+    <script>
+        function CheckSTK() {
+            const Checkstk = document.getElementById("STK").value;
+            const result3 = document.getElementById("resut");
+            const BankRegex = /^\d{6,19}$/;
+        
+        if(Checkstk.trim() === '') {
+            result3.innerHTML = '<span style="color: red;">Vui lòng nhập STK</span>';
+            return;
+        }
+        if(BankRegex.test(Checkstk)) {
+            result3.innerHTML = '<span style= "color: green;">STK Bank hợp lệ</span>';
+        } else {
+            result3.innerHTML = '<span style= "color: red;">STK Bank không hợp lệ</span>';
+        }
+        }
+    </script>
+    
+</body>
+</html>

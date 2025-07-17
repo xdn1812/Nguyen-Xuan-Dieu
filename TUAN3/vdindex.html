@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J-Shop</title>
+    <style>
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f8f8f8;
+        }
+        .Menu {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .Menu li {
+            margin-right: 10px;
+        }
+        .Menu li a {
+            text-decoration: none;
+            color: #000;
+        }
+        .button {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .Logo {
+            width: 30%;
+            text-align: left;
+        }
+        .Logo a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+        .ảnh {
+            width: 50px;
+            height: 30px;
+            float: left; /* Đặt ảnh sang trái */
+            margin-right: 10px; /* Khoảng cách với văn bản */
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        section {
+            width: 50%;
+            background: #f0f0f0;
+            padding: 10px;
+        }
+        aside {
+            width: 50%;
+            background: #e0e0e0;
+            padding: 10px;
+        }
+        footer {
+            width: 100%;
+            background: #d0d0d0;
+            padding: 10px;
+            text-align: center;
+            clear: both; /* Xóa float để footer nằm dưới */
+        }
+        .product-image {
+            width: 200px; /* Kích thước ảnh sản phẩm */
+            height: auto; /* Giữ tỷ lệ */
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="Logo">
+            <a href="#">J-Shop</a>
+        </div>
+        <ul class="Menu">
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="button">
+            <input type="text" placeholder="Search">
+            <button>🔍</button>
+        </div>
+    </nav>
+    <div class="container">
+        <section>
+            <h2>Chào mừng đến với J-Shop</h2>
+            <p>Khám phá bộ sưu tập nhẫn kim cương sang trọng và tinh tế, hoàn hảo cho các dịp đặc biệt như đính hôn và cưới hỏi.</p>
+        </section>
+        <aside>
+            <h3>Sản phẩm nổi bật</h3>
+            <img src="https://salt.tikicdn.com/cache/w1200/ts/product/f2/c5/ba/1e303af7ca69b1c159a76f63541fbc14.jpg" alt="Nhẫn kim cương" class="product-image">
+            <p>Nhẫn kim cương làm từ vàng 18K, thiết kế độc đáo, giá chỉ từ 10 triệu VNĐ.</p>
+        </aside>
+    </div>
+    <footer>
+        <p>© 2025 J-Shop - Tất cả quyền được bảo lưu</p>
+    </footer>
+</body>
+</html>

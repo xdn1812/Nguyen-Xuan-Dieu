@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu bản thân</title>
+</head>
+<style>
+    body {
+        background-image: url(https://ongnhuahdpevietnam.com/wp-content/uploads/2022/08/hinh-nen-dep-mau-trang.jpg);
+    }
+    h1 {
+        color: darkblue;
+        border: 8px solid whitesmoke;
+        font-style: italic;
+        font-size: 26px;
+        text-align: center;
+    }
+    h2{
+        color: darkblue;
+        font-size: 20px;
+        text-align: center;
+        background-color: rgb(203, 200, 200);
+    }
+    #Picture {
+        text-align: center;
+    }
+    .Profile {
+        margin-top: 18px;
+        text-align: center;
+        font-size: 18px;
+    }
+    .Love {
+        font-style: italic;
+    }
+    h3 {
+        margin-left: 20px;
+        color: darkblue;
+        border-color: 8px solid rgb(237, 205, 164);
+    }
+    .Love {
+        text-decoration-line: underline;
+    }
+    .TTCN {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .Question {
+        font-style: bold;
+        font-weight: 600;
+    }
+    h3 {
+        text-align: left;
+        margin-left: 15px;
+        color: rgb(6, 6, 88);
+        border-color: cornsilk;
+        background-color: rgb(216, 216, 216);
+    }
+</style>
+<body>
+    <h1> Xin chào mọi người lại là Xuân Diệu đây </h1>
+    <div id="Picture">
+        <img src="https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-1/486715200_2107277699757416_1670679157301719491_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx1354x1354&ctp=s200x200&_nc_cat=102&cb=99be929b-878c9f95&ccb=1-7&_nc_sid=e99d92&_nc_ohc=aUliakXqTn4Q7kNvwHXcips&_nc_oc=Adm9BsOlga6ZXrFUduQUia1nhitXnNlka9lRduFSg8XIgUww5n6B2NF73F_3_Kz4TJE&_nc_zt=24&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=vx93h8BWA7pFZRSP4rrKEQ&oh=00_AfReE7RM-3XKon1pHw_iM6JkL0Ow6BOqwd-LYegxZQ4rTw&oe=6874556C" alt="Picture">
+    </div>
+    <div class="Profile">
+        <div> Hé lô mình là Nguyễn Xuân Diệu </div>
+        <div> Mình sinh ngày 18-12-2005 và đến từ Đồng Tháp </div>
+    </div>  
+    <h3>Sở thích của mình là: </h3>
+    <div class="Love">
+        <ol> 
+            <li> Đá bóng </li>
+            <li> Bóng bàn </li>
+            <li> Gym </li>
+            <li> Đi dạo </li>
+        </ol>
+    </div>
+    <h2> Các bạn có thể liên hệ mình qua những cách sau đây: </h2>
+    <div class="TTCN">
+        <a href="https://www.facebook.com/"> Facebook của mình </a>
+        <div> Sđt: 0828849649 </div>
+    </div>
+    
+ <div class="Java1">
+    <h3>Tên của bạn là:</h3>
+    <input type="text" id="YourName" placeholder="InputYourName">
+    <button onclick="sayHello()">Say Hello</button>
+</div>
+<script>
+    function sayHello() {
+        const name = document.getElementById("YourName").value;
+        console.log("hello " + name);
+    }
+</script>
+    </script>
+    <div class="Java2">
+        <h3>Tên của bạn</h3>
+        <input type="text" id="Name" placeholder="Nhập tên">
+        <button onclick="Print()">In ra tên</button>
+        <p id="Printname">Tên của mình là</p>
+    </div>
+    <script class="2">
+        function Print () {
+            const name = document.getElementById("Name").value;
+            const greetingtext = "Hello " + name;
+            document.getElementById("Printname").innerText = greetingtext;        
+        }
+    </script>
+    <div class="Java3">
+        <h3>Thực hiện phép tính sau</h3>
+        <input type="number" id="Num1" placeholder="InputNum1">
+         <input type="number" id="Num2" placeholder="InputNum2">
+        <button onclick="PrintMath()">Đây là kết quả</button>
+        <div id="PrintMath">Kết quả là:</div>
+    </div>
+    <script class="3">
+        function PrintMath() {
+            const num1 = parseFloat(document.getElementById("Num1").value);
+            const num2 = parseFloat(document.getElementById("Num2").value);
+            const sum = num1 + num2;
+            document.getElementById("PrintMath").innerText = "Kết quả là: " + sum;
+        }
+    </script>
+    <div class="Java4">
+        <input type="text" id="userName" placeholder="Nhập tên của bạn">
+        <button onclick="checkInput()">Kiểm tra</button>
+        <div id="message"></div>
+    </div>
+    <script class="4">
+        function checkInput() {
+        const input = document.getElementById('userName');
+        const message = document.getElementById('message');
+        if (input.value.trim() === '') {
+            message.innerHTML = '<span style="color: red;">Vui lòng nhập dữ liệu!</span>';
+        } else {
+            message.innerHTML = '<span style="color: green;">Đã nhập dữ liệu!</span>';
+        }
+    }
+    </script>
+    
+    </div>
+    <div class="Question">
+        <label for="Question"> Đặt câu hỏi cho mình nhé!"
+            <input type="Điền vào đây">
+        </label>
+        <select>
+            <option value="choice"> Hãy chọn môn thể thao bạn thích  </option>
+            <option value="choice"> Gym </option>
+            <option value="choice"> Đá bóng </option>
+            <option value="choice"> Bóng bàn </option>
+        </select>
+    </div>
+</body>
+</html>
