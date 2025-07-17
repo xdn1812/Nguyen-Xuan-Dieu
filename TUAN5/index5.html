@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 5</title>
+</head>
+<body>
+    <div class="Cau5">
+        <h3> Câu 5: </h3>
+        <input type="text" id="number1" placeholder="Nhập số thứ nhất">
+        <input type="text" id="number2" placeholder="Nhập số thứ hai">
+        <button onclick="PrintNum()">In ra đáp án</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function PrintNum() {
+            const input1 = document.getElementById("number1").value;
+            const input2 = document.getElementById("number2").value;
+            const num1 = parseFloat(input1);
+            const num2 = parseFloat(input2);
+            let result;
+
+            if (input1.trim() === "" || input2.trim() === "") {
+                result = "Bạn chưa nhập đủ giá trị";
+                console.log(result);
+            } else if (isNaN(num1) || isNaN(num2)) {
+                result = "Vui lòng nhập hai số hợp lệ!";
+                console.log(result);
+            } else {
+                const sum = num1 + num2;
+                result = `Tổng của ${num1} và ${num2} là: ${sum}`;
+                console.log("Đáp án là " + sum);
+            }
+        }
+    </script>
+</body>
+</html>
