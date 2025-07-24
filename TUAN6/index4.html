@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>Kiểm tra Email</h3>
+        <input type="text" id="Checkmail" placeholder="Nhập tại đây">
+        <button onclick="Check()">Print result</button>
+        <p id="Answer"></p>
+    </div>
+    <script>
+        function Check() {
+            const Check1 = document.getElementById("Checkmail").value;
+            const Final = document.getElementById("Answer");
+            const EmailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!EmailRegex.test(Check1)) {
+                Answer.textContent = "Email ko hợp lệ vui lòng thử lại";
+                Answer.Classname = "Error"
+            } else {
+                Answer.textContent = "Email hợp lệ";
+                Answer.Classname = "Done"
+            }
+        }
+    </script>
+</body>
+</html>
