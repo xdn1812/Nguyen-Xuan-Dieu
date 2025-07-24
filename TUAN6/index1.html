@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3> Kiểm tra ngày trong quá khứ hay tương lai </h3>
+        <input type="date" id="Day" placeholder="Hãy chọn ngày"> 
+        <button onclick="CheckDate()"> Print days </button>
+    </div>
+    <script>
+            function CheckDate() {
+                var dateInput = document.getElementById("Day").value;
+                var inputDate = new Date (dateInput);
+                var today = new Date();
+                var Nowday = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+                if(inputDate.getTime() === Nowday.getTime()) {
+                    console.log("Đây là ngày hôm nay")
+                } else if (inputDate.getTime() < Nowday.getTime()) {
+                    console.log("Đây là ngày trong quá khứ")
+                } else {
+                    console.log("Đây là ngày trong tương lai")
+                }
+            }
+    </script>
+</body>
+</html>
