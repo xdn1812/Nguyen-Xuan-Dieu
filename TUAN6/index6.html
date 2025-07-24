@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div>
+        <h3>Kiểm tra ngày sinh</h3>
+        <input type="date" id="Day" placeholder="Hãy chọn ngày"> 
+        <button onclick="CheckDate()">Kiểm tra</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function CheckDate() {
+            const dateInput = document.getElementById("Day").value;
+            const result = document.getElementById("result");
+            const inputDate = new Date(dateInput);
+            const today = new Date();
+            const todayNormalized = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+
+            if (!dateInput || isNaN(inputDate.getTime())) {
+                result.innerHTML = '<span class="invalid">Vui lòng chọn một ngày hợp lệ!</span>';
+                result.className = "invalid";
+                return;
+            }
+
+            const age = today.getFullYear() - inputDate.getFullYear();
+            const monthDiff = today.getMonth() - inputDate.getMonth();
+            const dayDiff = today.getDate() - inputDate.getDate();
+            const adjustedAge = monthDiff < 0 || (monthDiff === 0 && dayDiff < 0) ? age - 1 : age;
+
+            if (inputDate.getTime() > todayNormalized.getTime()) {
+                result.innerHTML = '<span class="invalid">Không hợp lệ! Ngày sinh không được trong tương lai</span>';
+                result.className = "invalid";
+            } else if (adjustedAge < 18) {
+                result.innerHTML = '<span class="invalid">Không hợp lệ! Bạn phải trên 18 tuổi</span>';
+                result.className = "invalid";
+            } else {
+                if (inputDate.getTime() === todayNormalized.getTime()) {
+                    result.innerHTML = '<span class="valid">Hợp lệ! Hôm nay là sinh nhật của bạn!</span>';
+                } else {
+                    result.innerHTML = `<span class="valid">Hợp lệ! Bạn ${adjustedAge} tuổi</span>`;
+                }
+                result.className = "valid";
+            }
+        }
+    </script>
+</body>
+</html>
