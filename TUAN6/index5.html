@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>Kiểm tra Link hợp lệ</h3>
+        <input type="text" id="Linkok" placeholder="Nhập tại đây">
+        <button onclick="Check2()">Print</button>
+        <p id="CheckLink"></p>
+    </div>
+    <script>
+        function Check2 () {
+            const Linkdaok = document.getElementById("Linkok").value;
+            const DoneCheck = document.getElementById("CheckLink");
+            const LinkRegex = /^(https?:\/\/)?([\da-zA-Z.-]+)\.([a-zA-Z.]{2,6})([\/\w .-]*)*\/?(\?.*)?$/;
+            if (!LinkRegex.test(Linkdaok)) {
+                CheckLink.innerHTML = '<span style = "color: red;"> Link không hợp lệ </span>'
+                CheckLink.ClassName = "error"
+            } else {
+                CheckLink.innerHTML = '<span style = "color: green;"> Xác nhận link hợp lệ </span>'
+                CheckLink.ClassName = "done"
+            }
+        }
+    </script>
+</body>
+</html>

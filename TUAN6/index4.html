@@ -19,10 +19,10 @@
             const EmailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
             if (!EmailRegex.test(Check1)) {
                 Answer.textContent = "Email ko hợp lệ vui lòng thử lại";
-                Answer.Classname = "Error"
+                Answer.ClassName = "Error"
             } else {
                 Answer.textContent = "Email hợp lệ";
-                Answer.Classname = "Done"
+                Answer.ClassName = "Done"
             }
         }
     </script>
