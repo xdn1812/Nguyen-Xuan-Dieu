@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3> Kiểm tra mật khẩu mạnh</h3>
+        <input type="text" id="Pass" placeholder="Input here">
+        <button onclick="Passwork()">Print here</button>
+        <p id="ResultPass"></p>
+    </div>
+    <script>
+        function Passwork() {
+            const inputpass = document.getElementById("Pass").value;
+            const Print = document.getElementById("Passwork");
+            const PassRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&*])[A-Za-z\d@#$%^&*]{8,}$/;
+            if (!PassRegex.test(inputpass)) {
+                ResultPass.textContent = "Mật khẩu ko an toàn";
+                ResultPass.ClassName = "error"
+            } else {
+                ResultPass.textContent = "Mật khẩu an toàn";
+                ResultPass.ClassName = "done"
+            }
+        }
+    </script>
+</body>
+</html>
